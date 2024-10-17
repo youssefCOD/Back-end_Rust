@@ -39,19 +39,40 @@ cargo run
 
 File Structure
 ```bash
-/rust_web_server
-├── rust_web_server
-│   ├── __init__.rs
-│   ├── settings.rs
-│   ├── urls.rs
-│   ├── views.rs
-│   ├── models.rs
-│   ├── middleware.rs
-│   ├── static             # Static files
-│   └── templates          # HTML templates
-├── main.rs                # Entry point
-├── Cargo.toml             # Project configuration
-└── README.md              # Project documentation
+my_rust_backend/
+│
+├── src/
+│   ├── main.rs                # The main entry point of the application
+│   ├── lib.rs                 # (optional) If you are building a library alongside the app
+│   ├── config/                # Configuration files and settings
+│   │   └── mod.rs             # Config module for handling application settings
+│   │   └── database.rs        # Database configuration (e.g., connection pool)
+│   ├── routes/                # Route handlers or controllers
+│   │   └── mod.rs             # Entry point for routes
+│   │   └── auth.rs            # Authentication routes (e.g., login, register)
+│   │   └── users.rs           # User-specific routes (e.g., user profile, CRUD)
+│   └── services/              # Business logic and service layer
+│   │   └── mod.rs             # Entry point for services
+│   │   └── auth_service.rs    # Authentication-related logic (JWT, password hashing)
+│   └── models/                # Data models and database schema
+│   │   └── mod.rs             # Entry point for models
+│   │   └── user.rs            # User model, typically using ORM (e.g., Diesel, SQLx)
+│   └── utils/                 # Utility functions and helpers
+│   │   └── mod.rs             # Entry point for utilities
+│   │   └── hash.rs            # Utility function for hashing passwords
+│   └── middleware/            # Middleware for handling requests (e.g., logging, authentication)
+│   │   └── mod.rs             # Middleware module entry point
+│   └── errors/                # Centralized error handling
+│       └── mod.rs             # Error types and error handlers
+│
+├── tests/                     # Integration and unit tests
+│   └── integration_test.rs    # Example integration test
+│
+├── migrations/                # Database migrations (if using an ORM like Diesel)
+│
+├── Cargo.toml                 # Cargo manifest file (dependencies, metadata)
+└── .env                       # Environment variables (database URL, API keys)
+
 ```
 # Usage
 
