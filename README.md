@@ -22,11 +22,14 @@ A high-performance HTTP server built with Rust, featuring an organized file stru
 ### Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/yourusername/rust-web-server.git
-   cd rust-web-server
+   git clone https://github.com/youssefCOD/Back-end_Rust
+   cd Back-end_Rust
    ```
+
 2.Build the project:
+
 ```bash
 cargo build
 ```
@@ -38,7 +41,7 @@ cargo run
 ```
 
 File Structure
-```bash
+
 my_rust_backend/
 │
 ├── src/
@@ -73,19 +76,20 @@ my_rust_backend/
 ├── Cargo.toml                 # Cargo manifest file (dependencies, metadata)
 └── .env                       # Environment variables (database URL, API keys)
 
-```
-# Usage
+## Usage
 
-Routes
+### Routes
+
 Define your application's routes in urls.rs. Map URLs to views in views.rs.
 
-Views
+### Views
+
 Implement request handling logic in views.rs. Each view corresponds to a specific route.
 
-Models
+### Models
+
 Define data models in models.rs to manage data within your application.
 
-Middleware
-Create middleware in middleware.rs to handle cross-cutting concerns like logging and authentication.
+### Middleware
 
-
+Create middleware in middleware.rs to handle cross-cutting concerns like logging and authentication
