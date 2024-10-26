@@ -42,7 +42,7 @@ cargo run
 
 File Structure
 
-my_rust_backend/
+Rust Web Server/
 │
 ├── src/
 │   ├── main.rs                # The main entry point of the application
@@ -57,9 +57,6 @@ my_rust_backend/
 │   └── services/              # Business logic and service layer
 │   │   └── mod.rs             # Entry point for services
 │   │   └── auth_service.rs    # Authentication-related logic (JWT, password hashing)
-│   └── models/                # Data models and database schema
-│   │   └── mod.rs             # Entry point for models
-│   │   └── user.rs            # User model, typically using ORM (e.g., Diesel, SQLx)
 │   └── utils/                 # Utility functions and helpers
 │   │   └── mod.rs             # Entry point for utilities
 │   │   └── hash.rs            # Utility function for hashing passwords
@@ -68,10 +65,7 @@ my_rust_backend/
 │   └── errors/                # Centralized error handling
 │       └── mod.rs             # Error types and error handlers
 │
-├── tests/                     # Integration and unit tests
-│   └── integration_test.rs    # Example integration test
-│
-├── migrations/                # Database migrations (if using an ORM like Diesel)
+|__ tests.py
 │
 ├── Cargo.toml                 # Cargo manifest file (dependencies, metadata)
 └── .env                       # Environment variables (database URL, API keys)
