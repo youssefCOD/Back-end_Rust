@@ -1,0 +1,28 @@
+# Ignore build artifacts
+/target/
+**/*.rs.bk
+
+# Ignore Cargo.lock if you are building libraries (optional)
+# Uncomment the next line if you want to ignore it
+# Cargo.lock
+
+# Ignore configuration files
+.vscode/
+*.code-workspace
+
+# Ignore editor specific files
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Ignore documentation files
+/doc/
+
+# Ignore test output
+/tests/target/
